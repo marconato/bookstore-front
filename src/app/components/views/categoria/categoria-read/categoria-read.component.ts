@@ -9,7 +9,7 @@ import { CategoriaService } from '../categoria.service';
 })
 export class CategoriaReadComponent implements OnInit {
 
-  public displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  public displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
 
   public categorias: Categoria[] = [];
 

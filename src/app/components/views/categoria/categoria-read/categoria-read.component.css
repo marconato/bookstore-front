@@ -8,6 +8,10 @@
     margin-bottom: 3rem;
 }
 
+button {
+    margin-bottom: .8rem;
+}
+
 .title h1 {
     font-size: 2rem;
     color: rgb(83, 82, 82);
@@ -15,6 +19,13 @@
 }
 
 .table {
-    width: 100%;
-    
+    width: 100%;    
+}
+
+.actions-link {
+    color: gray;
+}
+
+.mat-header {
+    width: 5rem;
 }
