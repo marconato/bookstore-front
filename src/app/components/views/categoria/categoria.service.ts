@@ -26,8 +26,14 @@ export class CategoriaService {
     return this.http.delete<void>(`${this.endpoint}/${id}`);
   }
 
-  create(categoria: Categoria): Observable<Categoria> {
-    return this.http.post<Categoria>(this.endpoint, categoria);
+  update(categoria: Categoria): Observable<Categoria> {
+    if (categoria.id) {
+      return this.http.put<Categoria>(`${this.endpoint}/${categoria.id}`, categoria);
+    }
+    else 
+    {
+      return this.http.post<Categoria>(this.endpoint, categoria);
+    }
   }
 
   mensagem(text: string): void {

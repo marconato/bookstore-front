@@ -1,5 +1,10 @@
 <form>
-    <h1>CRIANDO NOVA CATEGORIA</h1>
+    <h1>CATEGORIA</h1>
+
+    <mat-form-field *ngIf="categoria.id" class="form">
+        <mat-label>ID</mat-label>
+        <input matInput [(ngModel)]="categoria.id" type="text" name="id" disabled>
+    </mat-form-field>
 
     <mat-form-field class="form">
         <mat-label>Nome</mat-label>
@@ -12,7 +17,7 @@
     </mat-form-field>
     
     <div class="buttons">
-        <button class="mat-elevation-z8" mat-stroked-button color="primary" (click)="create()">SALVAR</button>
+        <button class="mat-elevation-z8" mat-stroked-button color="primary" (click)="update()">SALVAR</button>
         <button class="mat-elevation-z8" mat-stroked-button color="warn" routerLink="/categorias">CANCELAR</button>
     </div>
 
