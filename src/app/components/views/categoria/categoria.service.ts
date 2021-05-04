@@ -18,6 +18,14 @@ export class CategoriaService {
     return this.http.get<Categoria[]>(this.endpoint);
   }
 
+  findById(id: string): Observable<Categoria>{
+    return this.http.get<Categoria>(`${this.endpoint}/${id}`);
+  }
+
+  delete(id: number):Observable<void> {
+    return this.http.delete<void>(`${this.endpoint}/${id}`);
+  }
+
   create(categoria: Categoria): Observable<Categoria> {
     return this.http.post<Categoria>(this.endpoint, categoria);
   }
