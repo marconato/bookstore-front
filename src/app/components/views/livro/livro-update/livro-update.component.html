@@ -22,7 +22,7 @@
 
     <mat-form-field class="form">
         <mat-label>Texto</mat-label>
-        <textarea matInput [formControl]="texto" [(ngModel)]="livro.texto" type="text" name="texto" 
+        <textarea matInput [formControl]="texto" [(ngModel)]="livro.texto" type="text" name="texto" rows="10"
             placeholder="Ex: Livros Computação" maxlength="2000000" required>
         </textarea>
         <mat-error *ngIf="texto.invalid">O campo TEXTO deve conter entre 10 e 2.000.000 caracteres</mat-error>
