@@ -22,7 +22,7 @@ export class LivroReadAllComponent implements OnInit {
   }
 
   findById() {
-    let idCat = this.route.snapshot.paramMap.get('id');
+    let idCat = this.route.snapshot.paramMap.get('idCat');
     this.service.findaAllByCategoria(idCat!).subscribe(livros => {
       this.livros = livros;
     });

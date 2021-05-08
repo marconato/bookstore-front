@@ -18,6 +18,24 @@ export class LivroService {
     return this.http.get<Livro[]>(`${this.endpoint}?categoria=${id}`);
   }
 
+  create(livro: Livro, idCat: string): Observable<Livro> {
+    return this.http.post<Livro>(`${this.endpoint}?categoria=${idCat}`, livro);
+  }
+
+  update(livro: Livro, idCat: string): Observable<Livro> {
+    if (livro.id) {
+      return this.http.put<Livro>(`${this.endpoint}/${livro.id}`, livro);
+    }
+    else
+    {
+      return this.http.post<Livro>(`${this.endpoint}?categoria=${idCat}`, livro);
+    }
+  }
+
+  findById(id: string): Observable<Livro>{
+    return this.http.get<Livro>(`${this.endpoint}/${id}`);
+  }
+
   mensagem(text: string): void {
     this._snack.open(`${text}`, 'OK', {
       horizontalPosition: 'end',

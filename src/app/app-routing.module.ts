@@ -5,6 +5,7 @@ import { CategoriaReadComponent } from './components/views/categoria/categoria-r
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { LivroReadAllComponent } from './components/views/livro/livro-read-all/livro-read-all.component';
+import { LivroUpdateComponent } from './components/views/livro/livro-update/livro-update.component';
 
 const routes: Routes = [
   {
@@ -28,8 +29,16 @@ const routes: Routes = [
     component: CategoriaUpdateComponent
   },
   {
-    path: 'categorias/:id/livros',
+    path: 'categorias/:idCat/livros',
     component: LivroReadAllComponent
+  },
+  {
+    path: 'categorias/:idCat/livros/update',
+    component: LivroUpdateComponent
+  },
+  {
+    path: 'categorias/:idCat/livros/update/:id',
+    component: LivroUpdateComponent
   }
 ];
 
