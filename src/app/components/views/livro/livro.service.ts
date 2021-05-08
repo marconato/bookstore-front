@@ -36,6 +36,10 @@ export class LivroService {
     return this.http.get<Livro>(`${this.endpoint}/${id}`);
   }
 
+  delete(id: number):Observable<void> {
+    return this.http.delete<void>(`${this.endpoint}/${id}`);
+  }
+
   mensagem(text: string): void {
     this._snack.open(`${text}`, 'OK', {
       horizontalPosition: 'end',
